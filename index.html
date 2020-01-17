@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Quiz</title>
+    <style type="text/css">
+        body{
+            cursor: progress;
+        }
+    </style>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="assets\css\quiz.css">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+
+	<section>
+		<!-- Heading-->
+		<div class="jumbotron jumbotron-fluid">
+			<div class="container">
+	  			<h1 class="display-2">Quiz Game</h1>
+	   			<p class="lead">Guess the right choice and win this game</p>
+	 		</div>
+	 	<!-- Heading ends-->
+
+	 	<!-- Progress Bar -->
+	 		<div class="progress">
+  				<div class="progress-bar bg-success" role="progressbar" style="width: 50%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">Correct</div>
+  				<div class="progress-bar bg-danger" role="progressbar" style="width: 50%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">Wrong</div>
+  	 		</div>
+  	 	</div>
+		<!-- Progress Bar ends -->
+
+		<!-- How to Play?  -->
+		<div class="container">
+			<div class="rules">
+				<h1 class="display-4 text-center text-danger">How to play?</h1>
+	   		<p class="lead">
+	   		<ol>
+	   			<li>Read the <b style="color: #ffff29;">Question</b> carefully</li>
+	   			<li>Choose the <b class="text-success">Correct</b> option 
+	   				<div class="progress">
+  							<div class="progress-bar bg-success" role="progressbar" style="width: 50%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
+		 					</div>
+	   			</li>
+	   			<li>Choosing <b class="text-danger">Wrong</b> option will make you lose your strenght 
+	   				<div class="progress">
+	   					<div class="progress-bar bg-danger" role="progressbar" style="width: 50%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+	   				</div>
+	   			</li>
+	   		</ol>
+	   		<div class="text-center">
+	   			<button id="start" class="btn btn-success">Let's GO</button>
+	  	 	</div>
+	 	</div>
+	 	<!-- How to Play? emds -->
+
+		<!-- Questions begin -->
+	 	<div class="question bg-info">
+	 		<h3 class="text-center text-danger">Who made this website?</h3>
+	 		<div class="bg-info d-flex justify-content-center row">
+	 			<p class="option col-lg-6 col-md-12">Bill Gates</p>
+	 			<p class="option col-lg-6 col-md-12">Stephen Hawkins</p>
+	 			<p class="option col-lg-6 col-md-12">Sarthak Gupta</p>
+	 			<p class="coption col-lg-6 col-md-12">A great person</p>
+	 		</div>
+	 	</div>
+
+	 	<div class="question bg-info">
+	 		<h3 class="text-center text-danger">What is 2+2?</h3>
+	 		<div class="bg-info d-flex justify-content-center row">
+	 			<p class="option col-lg-6 col-md-12">4</p>
+	 			<p class="option col-lg-6 col-md-12">2</p>
+	 			<p class="option col-lg-6 col-md-12">22</p>
+	 			<p class="coption col-lg-6 col-md-12">2+2</p>
+	 		</div>
+	 	</div>
+
+	 	<div class="question bg-info">
+	 		<h3 class="text-center text-danger">1,4,9,16,?</h3>
+	 		<div class="bg-info d-flex justify-content-center row">
+	 			<p class="option col-lg-6 col-md-12">18</p>
+	 			<p class="option col-lg-6 col-md-12">19</p>
+	 			<p class="option col-lg-6 col-md-12">27</p>
+	 			<p class="coption col-lg-6 col-md-12">25</p>
+	 		</div>
+	 	</div>
+
+	 	<div class="question bg-info">
+	 		<h3 class="display-4 text-center text-danger">fish:pond  ::  lion:  ?</h3>
+	 		<div class="bg-info d-flex justify-content-center row">
+	 			<p class="option col-lg-6 col-md-12">Sky</p>
+	 			<p class="option col-lg-6 col-md-12">Road</p>
+	 			<p class="option col-lg-6 col-md-12">Cage</p>
+	 			<p class="coption col-lg-6 col-md-12">Forest</p>
+	 		</div>
+	 	</div>
+
+	 	<div class="question bg-info">
+	 		<h3 style="font-size: 30px;" class="display-4 text-center text-danger">If Suresh starts moving towards North then, turn left, then walks some distance then turn right. Where is he now from the starting point?</h3>
+	 		<div class="bg-info d-flex justify-content-center row">
+	 			<p class="option col-lg-6 col-md-12">North</p>
+	 			<p class="option col-lg-6 col-md-12">South</p>
+	 			<p class="option col-lg-6 col-md-12">East</p>
+	 			<p class="coption col-lg-6 col-md-12">West</p>
+	 		</div>
+	 	</div>
+
+	 	<div class="question bg-info">
+	 		<h3 class="display-4 text-center text-danger">What year is it?</h3>
+	 		<div class="bg-info d-flex justify-content-center row">
+	 			<p class="option col-lg-6 col-md-12">2019</p>
+	 			<p class="option col-lg-6 col-md-12">3010</p>
+	 			<p class="option col-lg-6 col-md-12">10000</p>
+	 			<p class="coption col-lg-6 col-md-12">2020</p>
+	 		</div>
+	 	</div>
+	 	<div class="question bg-info">
+	 		<h3 class="display-4 text-center text-danger">fish:pond  ::  lion:  ?</h3>
+	 		<div class="bg-info d-flex justify-content-center row">
+	 			<p class="option col-lg-6 col-md-12">Sky</p>
+	 			<p class="option col-lg-6 col-md-12">Road</p>
+	 			<p class="option col-lg-6 col-md-12">Cage</p>
+	 			<p class="coption col-lg-6 col-md-12">Forest</p>
+	 		</div>
+	 	</div>
+        <div class="question bg-info">
+            <h3 class="display-4 text-center text-danger">fish:pond  ::  lion:  ?</h3>
+            <div class="bg-info d-flex justify-content-center row">
+                <p class="option col-lg-6 col-md-12">Sky</p>
+                <p class="option col-lg-6 col-md-12">Road</p>
+                <p class="option col-lg-6 col-md-12">Cage</p>
+                <p class="coption col-lg-6 col-md-12">Forest</p>
+            </div>
+        </div>
+	 	<div class="question bg-info">
+	 		<h3 class="display-4 text-center text-danger">fish:pond  ::  lion:  ?</h3>
+	 		<div class="bg-info d-flex justify-content-center row">
+	 			<p class="option col-lg-6 col-md-12">Sky</p>
+	 			<p class="option col-lg-6 col-md-12">Road</p>
+	 			<p class="option col-lg-6 col-md-12">Cage</p>
+	 			<p class="coption col-lg-6 col-md-12">Forest</p>
+	 		</div>
+	 	</div>
+	 	<div class="question bg-info">
+	 		<h3 class="display-4 text-center text-danger">fish:pond  ::  lion:  ?</h3>
+	 		<div class="bg-info d-flex justify-content-center row">
+	 			<p class="option col-lg-6 col-md-12">Sky</p>
+	 			<p class="option col-lg-6 col-md-12">Road</p>
+	 			<p class="option col-lg-6 col-md-12">Cage</p>
+	 			<p class="coption col-lg-6 col-md-12">Forest</p>
+	 		</div>
+	 	</div>
+
+	 	<!-- Questions end -->
+	</section>
+    <div class="ending bg-info">
+        <h3 class="display-4 text-center text-danger">Game Over</h3>
+        <h1 class="text-center">You <span>Played Well</span></h1>
+    </div>
+	<script type="text/javascript" src="assets\js\quiz.js"></script>
+    <style type="text/css">
+        body{
+            cursor: default;
+        }
+    </style>
+</body>
+</html>
